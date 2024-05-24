@@ -1,0 +1,741 @@
+.assessmentHeadingContainer {
+  display: flex;
+  //   align-items: center;
+  height: 70px;
+  gap: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $border-overviewSection;
+
+  &_headingText {
+    display: flex;
+    padding: 0px 20px;
+    border-right: 1px solid #dadce0;
+
+    span {
+      display: flex;
+      align-self: center;
+      color: $color-darkblue;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+
+  &_tabText {
+    position: relative;
+    display: flex;
+    height: 70px;
+
+    span {
+      color: $color-lightblue;
+      font-size: 14px;
+      font-style: normal;
+      display: flex;
+      align-self: center;
+      cursor: pointer;
+      transform: translateY(-25%);
+      font-weight: 600;
+    }
+    // border-bottom: 3px solid $color-lightblue;
+  }
+
+  &_tabBorder {
+    position: absolute;
+    bottom: -0.5px;
+    left: 0px;
+    height: 3px;
+    background-color: $color-lightblue;
+    width: 100%;
+  }
+}
+
+.assesmentOverview {
+  padding: 20px;
+
+  &_heading {
+    color: $color-darkblue;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .assessmentDetailsContainer {
+    width: 100%;
+    border: 1px solid $border-lightgrey;
+    // padding: 0px 20px;
+    border-radius: 12px;
+    display: flex;
+
+    .assessmentDetails {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px 20px;
+
+      &:nth-child(n + 2) {
+        width: 30%;
+      }
+
+      &:nth-child(n + 3) {
+        width: 40%;
+      }
+
+      &:last-child {
+        width: 15%;
+
+        @include respond(tab-port) {
+          width: initial !important;
+        }
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $border-lightgrey;
+      }
+
+      &_heading {
+        color: $color-darkblue;
+        font-feature-settings: "clig" off, "liga" off;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &_bottomContainer {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &_icon {
+          display: flex;
+          align-self: center;
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &_number {
+          display: flex;
+          align-self: center;
+          color: $color-darkblue;
+          font-feature-settings: "clig" off, "liga" off;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        // .multipleDetailsParentContainer {
+        //   display: flex;
+        //   gap: 20px;
+
+        //   .multipleDetailsContainer {
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 5px;
+        //     padding-right: 20px;
+
+        //     @include respond(tab-port) {
+        //       padding-right: 6px;
+        //     }
+
+        //     &:not(:last-child) {
+        //       border-right: 1px solid $border-lightgrey;
+        //     }
+
+        //     &_topSection {
+        //       display: flex;
+        //       gap: 4px;
+        //       align-items: center;
+
+        //       .topSectionText {
+        //         color: $color-darkblue;
+        //         font-feature-settings: "clig" off, "liga" off;
+        //         font-size: 20px;
+        //         font-weight: 700;
+
+        //         @include respond(tab-port) {
+        //           font-size: 14px;
+        //         }
+        //       }
+
+        //       .topSectionSecondaryText {
+        //         color: $color-lightgreen;
+        //         font-feature-settings: "clig" off, "liga" off;
+        //         font-size: 12px;
+        //         font-weight: 500;
+        //       }
+        //     }
+
+        //     &_bottomSection {
+        //       color: $color-darkblue;
+        //       font-feature-settings: "clig" off, "liga" off;
+        //       font-size: 12px;
+        //       font-weight: 500;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+.createAssessmentSection {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include respond(tab-port) {
+    padding: 0px;
+    height: 78vh;
+    overflow: auto;
+  }
+
+  &_headingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_heading {
+      color: $color-darkblue;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &_icons {
+      display: none;
+
+      gap: 10px;
+      align-items: center;
+
+      @include respond(tab-port) {
+        display: flex;
+      }
+
+      img {
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+
+  .assessmentParentBox {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    & > * {
+      width: calc(100% / 3 - 30px);
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+      // flex: 1;
+    }
+
+    .assessmentNewBox {
+      // flex: 1;
+      cursor: pointer;
+
+      padding: 30px;
+      background-color: $bg-website;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px dashed $border-lightgrey;
+      color: $color-darkblue;
+      text-align: center;
+
+      @include respond(tab-port) {
+        padding: 20px;
+      }
+
+      &_icon {
+        width: 70px;
+        height: 70px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &_primaryText {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      &_secondaryText {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .assessmentBox {
+    border-radius: 12px;
+    border: 1px solid $border-lightgrey;
+    padding: 16px;
+
+    @include respond(tab-port) {
+      padding: 14px;
+    }
+
+    &_topSection {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed $border-lightgrey;
+
+      .leftSection {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include respond(tab-port) {
+          flex-direction: row;
+        }
+
+        &_icon {
+          width: 50px;
+          height: 50px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .leftSectionDetails {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          &_heading {
+            color: $color-darkblue;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+          }
+
+          &_bottomSection {
+            display: flex;
+            gap: 10px;
+
+            &_title {
+              color: $color-darkblue;
+              font-feature-settings: "clig" off, "liga" off;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              display: flex;
+              align-self: center;
+              padding-right: 10px;
+              border-right: 1px solid $border-lightgrey;
+            }
+
+            &_date {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+
+              .dateIcon {
+                display: flex;
+                align-self: center;
+                width: 14px;
+                height: 14px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .dateText {
+                display: flex;
+                align-self: center;
+                color: $color-grey;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+      .rightSection {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .assessmentBoxFooter {
+      padding-top: 16px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &_questionInfo {
+        display: flex;
+        gap: 14px;
+        color: $color-darkblue;
+        font-feature-settings: "clig" off, "liga" off;
+
+        .questionDetailBox {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          &_value {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+          }
+
+          &_text {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+          }
+        }
+      }
+
+      &_shareContainer {
+        display: flex;
+
+        gap: 10px;
+        align-items: center;
+
+        .badge-container {
+          display: flex;
+          position: absolute;
+          align-self: center;
+
+          .badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $bg-white;
+            text-align: center;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: #6548ee;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 1;
+
+            &:not(:first-child) {
+              position: absolute;
+              left: 20%;
+              z-index: 2;
+              // margin-left: -50%;
+              // transform: translateX(-40%);
+            }
+          }
+        }
+      }
+
+      &_shareBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 2px 8px 2px 6px;
+        border-radius: 50px;
+        border: 1px solid $color-darkblue;
+
+        &_icon {
+          display: flex;
+          align-self: center;
+          width: 20px;
+          height: 20px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &_text {
+          color: $color-darkblue;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .totalAssessmentParentBox {
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      border: 1px solid $border-lightgrey;
+      animation: none;
+    }
+
+    .section1 {
+      display: flex;
+    }
+
+    .subsection {
+      flex: 1;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .border-right {
+      border-right: 1px solid #ccc;
+    }
+
+    .section2 {
+      border: 1px solid $border-lightgrey;
+    }
+
+    .section2,
+    .section3 {
+      width: 100%;
+      box-sizing: border-box;
+      // padding: 10px;
+    }
+
+    /* Just for demonstration purposes */
+    .subsection p,
+    .section2 p,
+    .section3 p {
+      margin: 0;
+    }
+
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 6px;
+      &_topSection {
+        color: $color-darkblue;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      &_bottomSection {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &_icon {
+          display: flex;
+          align-self: center;
+          width: 40px;
+          height: 40px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &_heading {
+          display: flex;
+          align-self: center;
+          color: $color-darkblue;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/* Basic styles for the modal and overlay */
+.modal-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.modal-overlay .modal {
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.modal-overlay .modal.slide-up {
+  transform: translateY(0);
+}
+.modal-overlay .modal.slide-down {
+  transform: translateY(100%);
+}
+
+/* Close button style */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #888;
+}
+
+.assessmentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
+
+  &:nth-child(n + 2) {
+    width: 30%;
+  }
+
+  &:nth-child(n + 3) {
+    width: 40%;
+  }
+
+  &:last-child {
+    width: 15%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid $border-lightgrey;
+  }
+
+  &_heading {
+    color: $color-darkblue;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &_bottomContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &_icon {
+      display: flex;
+      align-self: center;
+      width: 40px;
+      height: 40px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &_number {
+      display: flex;
+      align-self: center;
+      color: $color-darkblue;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .multipleDetailsParentContainer {
+      display: flex;
+      gap: 20px;
+
+      @include respond(tab-port) {
+        gap: 10px;
+      }
+
+      .multipleDetailsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-right: 20px;
+
+        @include respond(tab-port) {
+          padding-right: 6px;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid $border-lightgrey;
+        }
+
+        &_topSection {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+
+          .topSectionText {
+            color: $color-darkblue;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 20px;
+            font-weight: 700;
+
+            @include respond(tab-port) {
+              font-size: 14px;
+            }
+          }
+
+          .topSectionSecondaryText {
+            color: $color-lightgreen;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+
+        &_bottomSection {
+          color: $color-darkblue;
+          font-feature-settings: "clig" off, "liga" off;
+          font-size: 12px;
+          font-weight: 500;
+
+          @include respond(tab-port) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

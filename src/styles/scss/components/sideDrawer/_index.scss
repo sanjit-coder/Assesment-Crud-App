@@ -1,0 +1,111 @@
+.parentContainer {
+  display: flex;
+  height: 100vh;
+  @include respond(tab-port) {
+    display: none;
+  }
+
+  .sideDrawerContainer {
+    width: 9.72%;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    bottom: 10px;
+    background-color: $bg-white;
+    padding: 26px 20px 20px 30px;
+    overflow-y: auto;
+
+    .listContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2px;
+      padding-bottom: 27px;
+      border-bottom: 1px dotted #bacbd5;
+
+      .listItem {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &_active {
+          border: 1px solid $color-lightblue;
+          background-color: rgba(0, 115, 230, 0.1);
+        }
+        &_icon {
+          display: flex;
+          align-self: center;
+        }
+
+        &_text {
+          text-align: center;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .adminSection {
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      &_button {
+        display: flex;
+        align-self: center;
+        width: fit-content;
+        padding: 6px 8px;
+        border-radius: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-red;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        border: 1px solid $color-red;
+        background-color: $bg-lightred;
+      }
+
+      .listItem {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        border-radius: 8px;
+        // border: 1px solid $color-lightblue;
+        // background-color: rgba(0, 115, 230, 0.1);
+        &_icon {
+          display: flex;
+          align-self: center;
+        }
+
+        &_text {
+          text-align: center;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .overviewContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 12px 0px;
+    background-color: $bg-white;
+    margin-left: calc(9.72% + 16px);
+    flex: 1;
+    overflow-y: auto;
+  }
+}

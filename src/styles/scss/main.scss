@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+//VARIABLES
+@import "variables";
+
+//MIXINS
+@import "mixins/mixins";
+
+//BASE STYLING
+@import "base/base";
+
+//COMPONENTS
+@import "components/sideDrawer";
+@import "components/modal";
+@import "components/textInput";
+@import "components/selectInput";
+@import "components/skillsInput";
+@import "components/mobileDrawer";
+@import "components/assessmentSection";

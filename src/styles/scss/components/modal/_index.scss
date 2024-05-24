@@ -1,0 +1,128 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  @include respond(tab-port) {
+    align-items: flex-end;
+  }
+}
+
+.modalContainer {
+  width: 41%;
+  border-radius: 8px;
+  height: fit-content;
+  max-height: 95vh;
+  background-color: $bg-white;
+  // opacity: 0;
+  animation: none;
+  // transition: height 4s, opacity 4s, transform 4s;
+
+  @include respond(tab-port) {
+    width: 100%;
+    max-height: 98.5vh;
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-bottom: 1px solid $border-lightgrey;
+
+    &_text {
+      display: flex;
+      align-self: center;
+      color: $color-darkblue;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      padding-left: 20px;
+    }
+
+    &_icon {
+      padding-right: 20px;
+      cursor: pointer;
+      display: flex;
+      align-self: center;
+    }
+  }
+
+  &_inputs {
+    padding: 20px;
+    width: 100%;
+    max-height: 74vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &_footerSection {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-white;
+    box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    .saveBtn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 30px;
+      border-radius: 8px;
+      background: $color-lightblue;
+      color: $bg-white;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}
+
+.modalOpen {
+  opacity: 0;
+  animation: slideIn 0.5s forwards !important;
+}
+
+.modalClosed {
+  opacity: 1;
+  animation: slideOut 0.5s forwards !important;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

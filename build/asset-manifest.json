@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.74f37401.css",
+    "main.js": "/static/js/main.67379533.js",
+    "static/js/787.49b31a46.chunk.js": "/static/js/787.49b31a46.chunk.js",
+    "static/media/globeIcon.svg": "/static/media/globeIcon.23110b87257ce5a777837d15d49ccae2.svg",
+    "static/media/peopleIcon.svg": "/static/media/peopleIcon.da1e31fe7cfa8764bf3302319e3fdba1.svg",
+    "static/media/quiz.svg": "/static/media/quiz.92ce2abcdc72c6942fb2c5e9d74db89e.svg",
+    "static/media/roundstatus.svg": "/static/media/roundstatus.514448836f60dd69d8d3c13874d738ea.svg",
+    "static/media/note.svg": "/static/media/note.e215c03180e06db22c7b2e96b514f2b3.svg",
+    "static/media/calendar.svg": "/static/media/calendar.97712b516bb1856d8ddfceb4286713e4.svg",
+    "static/media/jobIcon.svg": "/static/media/jobIcon.9917575561148fda516752aac2054330.svg",
+    "static/media/attachIcon.svg": "/static/media/attachIcon.07f7cab4ddca12295f548d4c9cd0b699.svg",
+    "static/media/link.svg": "/static/media/link.12401ecd972f4eab4f9caae27044d74f.svg",
+    "static/media/agenda.svg": "/static/media/agenda.590084dc4e47f83e261af94746081750.svg",
+    "static/media/search.svg": "/static/media/search.8f8abd8242dbe047bf2d25fdb550a646.svg",
+    "static/media/editIcon.svg": "/static/media/editIcon.66b6ddd4804e3ed791f66f43a7c7f8ed.svg",
+    "index.html": "/index.html",
+    "static/media/dashboard.svg": "/static/media/dashboard.5c4dff3e3f5668de2fee8befeb0ae0cd.svg",
+    "static/media/filterlist.svg": "/static/media/filterlist.3fb3e1758b89f768346b5d28ec094d29.svg",
+    "static/media/addIcon.svg": "/static/media/addIcon.928eb5eea5f0943e45fcdfc39aaea421.svg",
+    "static/media/appIcon.svg": "/static/media/appIcon.24880b21c3b19373708f72c2096e2d71.svg",
+    "static/media/closeTag.svg": "/static/media/closeTag.72cabe1154103c2a07cd27189a51bd5a.svg",
+    "static/media/downarrow.svg": "/static/media/downarrow.9ded50791308cabe932eaabf777de4b0.svg",
+    "static/media/crossIcon.svg": "/static/media/crossIcon.007890a1a4325ccce3d7a800c5a516ef.svg",
+    "static/media/barchart.svg": "/static/media/barchart.d2fc73263cba2932457f014f00d51204.svg",
+    "main.74f37401.css.map": "/static/css/main.74f37401.css.map",
+    "main.67379533.js.map": "/static/js/main.67379533.js.map",
+    "787.49b31a46.chunk.js.map": "/static/js/787.49b31a46.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74f37401.css",
+    "static/js/main.67379533.js"
+  ]
+}

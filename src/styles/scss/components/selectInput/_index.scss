@@ -1,0 +1,60 @@
+/* SelectInput.css */
+
+.custom-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.custom-select-label {
+  color: $color-darkblue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.custom-select-header:focus {
+  outline: none;
+}
+
+.custom-select-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  // display: none;
+}
+
+.custom-select-options.active {
+  display: block;
+}
+
+.custom-select-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-select-option:hover {
+  background-color: #f0f0f0;
+}
